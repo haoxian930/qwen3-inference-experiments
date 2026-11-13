@@ -1,0 +1,177 @@
+{
+  "started_at_utc": "2026-11-13T19:00:36.417057+00:00",
+  "settings": {
+    "models": [
+      "base"
+    ],
+    "device": "cuda",
+    "examples": 1,
+    "max_new_tokens": 64,
+    "draft_size": 4,
+    "ngram_size": 3,
+    "repeats": 1,
+    "seed": 123,
+    "precision": "bfloat16",
+    "model_dir": "qwen3",
+    "data": "ch03/01_main-chapter-code/math500_test.json",
+    "output": "results\\validation-base-final.json",
+    "allow_mismatch": false
+  },
+  "environment": {
+    "python": "3.10.11",
+    "platform": "Windows-10-10.0.26300-SP0",
+    "torch": "2.10.0+cu128",
+    "cuda_version": "12.8",
+    "device": "cuda",
+    "gpu": "NVIDIA GeForce RTX 3070 Ti Laptop GPU",
+    "execution": "eager",
+    "seed": 123,
+    "cuda_tf32": false
+  },
+  "models": {
+    "base": {
+      "warmup_identical": true,
+      "warmup_first_difference": null,
+      "warmup_ids": {
+        "baseline": [
+          1124,
+          79075,
+          96065,
+          18,
+          26266,
+          37018,
+          35702,
+          2493,
+          15170,
+          17,
+          5410,
+          92
+        ],
+        "speculative": [
+          1124,
+          79075,
+          96065,
+          18,
+          26266,
+          37018,
+          35702,
+          2493,
+          15170,
+          17,
+          5410,
+          92
+        ]
+      },
+      "runs": {
+        "baseline": [
+          {
+            "records": [
+              {
+                "problem": "Convert the point $(0,3)$ in rectangular coordinates to polar coordinates.  Enter your answer in the form $(r,\\theta),$ where $r > 0$ and $0 \\le \\theta < 2 \\pi.$",
+                "ground_truth": "\\left( 3, \\frac{\\pi}{2} \\right)",
+                "ids": [
+                  1124,
+                  79075,
+                  96065,
+                  18,
+                  26266,
+                  37018,
+                  35702,
+                  2493,
+                  15170,
+                  17,
+                  5410,
+                  92
+                ],
+                "response": " \\boxed{(3,\\frac{\\pi}{2})}",
+                "answer": "(3,\\frac{\\pi}{2})",
+                "correct": true,
+                "generation_seconds": 1.4224839999951655,
+                "stats": {}
+              }
+            ],
+            "evaluation_seconds": 1.4242167999982485,
+            "peak_cuda_allocated_bytes": 1566964224
+          }
+        ],
+        "speculative": [
+          {
+            "records": [
+              {
+                "problem": "Convert the point $(0,3)$ in rectangular coordinates to polar coordinates.  Enter your answer in the form $(r,\\theta),$ where $r > 0$ and $0 \\le \\theta < 2 \\pi.$",
+                "ground_truth": "\\left( 3, \\frac{\\pi}{2} \\right)",
+                "ids": [
+                  1124,
+                  79075,
+                  96065,
+                  18,
+                  26266,
+                  37018,
+                  35702,
+                  2493,
+                  15170,
+                  17,
+                  5410,
+                  92
+                ],
+                "response": " \\boxed{(3,\\frac{\\pi}{2})}",
+                "answer": "(3,\\frac{\\pi}{2})",
+                "correct": true,
+                "generation_seconds": 1.4602847000060137,
+                "stats": {
+                  "proposed": 24,
+                  "accepted": 0,
+                  "target_calls": 13
+                }
+              }
+            ],
+            "evaluation_seconds": 1.4604407000006177,
+            "peak_cuda_allocated_bytes": 1566168064
+          }
+        ]
+      },
+      "differences_per_run": [
+        []
+      ],
+      "summary": {
+        "baseline": {
+          "median_generation_seconds": 1.4224839999951655,
+          "median_tokens_per_second": 8.435947258486411,
+          "generated_tokens_per_run": [
+            12
+          ],
+          "correct_per_run": [
+            1
+          ],
+          "median_evaluation_seconds": 1.4242167999982485,
+          "accepted": 0,
+          "proposed": 0,
+          "acceptance_rate": null,
+          "target_calls_per_run": [
+            null
+          ]
+        },
+        "speculative": {
+          "median_generation_seconds": 1.4602847000060137,
+          "median_tokens_per_second": 8.217575654905227,
+          "generated_tokens_per_run": [
+            12
+          ],
+          "correct_per_run": [
+            1
+          ],
+          "median_evaluation_seconds": 1.4604407000006177,
+          "accepted": 0,
+          "proposed": 24,
+          "acceptance_rate": 0.0,
+          "target_calls_per_run": [
+            13
+          ]
+        }
+      },
+      "elapsed_time_ratio": 0.9741141573210398,
+      "all_outputs_identical": true,
+      "interpretation": "matched outputs"
+    }
+  }
+}

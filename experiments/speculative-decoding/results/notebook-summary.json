@@ -1,0 +1,12 @@
+{
+  "provenance": "Transcribed from saved output in ch03/01_main-chapter-code/ch03_main.ipynb; aggregates only, not newly measured raw data",
+  "settings": {"examples": 10, "repeats": 1, "max_new_tokens": 2048, "draft_size": 4, "ngram_size": 3, "execution": "eager", "dtype": "bfloat16", "device": "cuda"},
+  "missing_metadata": ["GPU model", "Python version", "PyTorch version at measurement", "measurement timestamp", "per-question raw timing records"],
+  "rows": [
+    {"model": "base", "method": "baseline", "generation_seconds": 43.99, "evaluation_seconds": 44.02, "tokens_per_second": 21.73, "generated_tokens": 956, "correct": 2},
+    {"model": "base", "method": "speculative", "generation_seconds": 32.83, "evaluation_seconds": 32.84, "tokens_per_second": 29.12, "generated_tokens": 956, "correct": 3, "elapsed_time_ratio": 1.34, "acceptance_percent": 19.87, "identical_outputs": 9},
+    {"model": "reasoning", "method": "baseline", "generation_seconds": 533.85, "evaluation_seconds": 533.89, "tokens_per_second": 22.33, "generated_tokens": 11919, "correct": 7},
+    {"model": "reasoning", "method": "speculative", "generation_seconds": 274.60, "evaluation_seconds": 274.63, "tokens_per_second": 37.27, "generated_tokens": 10235, "correct": 7, "elapsed_time_ratio": 1.94, "acceptance_percent": 21.55, "identical_outputs": 0}
+  ],
+  "status": "Exploratory; token divergence unresolved; elapsed-time ratios do not establish equivalent-output acceleration"
+}
