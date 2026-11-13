@@ -1,6 +1,27 @@
-# Build A Reasoning Model (From Scratch)
+# Qwen3 inference experiments: n-gram speculative decoding
 
-This repository contains the code for developing an LLM reasoning model and is the official code repository for the book [*Build a Reasoning Model (From Scratch)*](https://mng.bz/lZ5B).
+This checkout combines my work through *Build a Reasoning Model (From Scratch)*
+with an independent experiment implementing and evaluating n-gram lookup
+speculative decoding on the book's Qwen3 model.
+
+**Start with the [speculative decoding project](experiments/speculative-decoding/README.md)**
+for my implementation, benchmark commands, recorded results, and correctness
+investigation. The additions include block verification, prefix acceptance,
+KV-cache rollback, and a benchmark comparing base and reasoning models.
+
+The saved ten-question experiment shows lower elapsed generation times, but also
+token divergence. These are exploratory measurements; equivalent-output speedup
+is still under investigation. The benchmark checks token equality by default.
+
+The model architecture, loaders, tokenizer, baseline decoding, and grading code
+are Sebastian Raschka's work. The original book documentation follows below;
+upstream attribution and license notices are retained.
+
+---
+
+# Build A Reasoning Model (From Scratch) — upstream book documentation
+
+The original [official repository](https://github.com/rasbt/reasoning-from-scratch) contains the code for developing an LLM reasoning model for the book [*Build a Reasoning Model (From Scratch)*](https://mng.bz/lZ5B).
 
 
 <br>
